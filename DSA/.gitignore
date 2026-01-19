@@ -1,0 +1,17 @@
+# Executables
+*.exe
+
+# Object files
+*.o
+*.obj
+
+# Build directories
+build/
+bin/
+
+# VS Code (if you use it)
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
