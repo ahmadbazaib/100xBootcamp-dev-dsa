@@ -3,32 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/Web-Dev/Assignment-1/style.css" />
     <title>Assignment 1</title>
   </head>
   <body>
     <div class="card">
       <h3>IIElevenLabs</h3>
-    </div>
-    <div class="form">
-      <h2>Welcome back</h2>
-      <div class="form__sign">
-        <button>
-          <img src="./google.svg" alt="google icon" />
-          <span>Sign in with Google</span>
-        </button>
 
-        <div class="form__sign-in">
+      <div class="card__form">
+        <div class="card__form--sign">
+          <h2>Create an account</h2>
+          <button class="card__form--sign-btn">
+            <img src="./google.svg" alt="google icon" />
+            <span>Sign in with Google</span>
+          </button>
+        </div>
+
+        <div class="card__form__sign-in">
           <form action="#">
-            <label for="email">Email</label>
+            <label for="email">Email</label><br />
             <input type="text" name="email" id="email" required />
-            <label for="password">Password</label>
+            <br />
+
+            <label for="password">Password</label><br />
             <input type="text" name="password" id="password" />
-            <button>Sign in</button>
+            <br />
+
+            <button class="card__form__sign-in--btn">Sign in</button>
           </form>
         </div>
 
-        <p>Don't have and account? <a href="#">Sign up</a></p>
+        <p class="footer">Don't have and account? <a href="#">Sign up</a></p>
       </div>
     </div>
   </body>
