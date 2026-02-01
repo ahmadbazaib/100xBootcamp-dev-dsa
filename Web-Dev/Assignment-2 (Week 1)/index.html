@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -10,124 +16,137 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./style.css" />
     <title>11ElevenLabs Sales Team</title>
   </head>
   <body>
-    <div class="card">
-      <h3>llElevenLabs</h3>
+    <div class="main">
+      <div class="card">
+        <h3>llElevenLabs</h3>
 
-      <div class="card__info">
-        <h2>Contact our sales team</h2>
-        <div class="card__info--sales">
-          <p>
-            <img
-              style="background-color: black"
-              src="./assests/rocket.svg"
-              alt="rocket"
-            />
-            <span>Custom pricing and elevated concurrency</span>
-          </p>
-          <p>
-            <img
-              style="background-color: black"
-              src="./assests/shield.svg"
-              alt="rocket"
-            />
-            <span
-              >Enterprise-grade security including SOC II, GDPR and HIPAA
-              compliance</span
-            >
-          </p>
-          <p>
-            <img
-              style="background-color: black"
-              src="./assests/enterprise.svg"
-              alt="rocket"
-            /><span>Enterprise support and SLAs</span>
-          </p>
-        </div>
-
-        <div class="card__trusted">
-          <p>Trusted by 10,000+ leading businesses</p>
-
-          <div class="card__trusted--enterprises">
-            <img
-              src="./assests/cisco.svg"
-              alt="cisco"
-              class="card__trusted--enterprises-imgs"
-            />
-            <img
-              src="./assests/t-mobile.svg"
-              alt="T mobile"
-              class="card__trusted--enterprises-imgs"
-            />
-            <img
-              src="./assests/walt-disney.svg"
-              alt="walt disney"
-              class="card__trusted--enterprises-imgs"
-            />
-            <img
-              src="./assests/nvidia.svg"
-              alt="nvidia"
-              class="card__trusted--enterprises-imgs"
-            />
-            <img
-              src="./assests/salesforce.svg"
-              alt="salesforce"
-              class="card__trusted--enterprises-imgs"
-            />
+        <div class="card__info">
+          <h2>Contact our sales team</h2>
+          <div class="card__info--sales">
+            <p>
+              <img
+                style="background-color: black"
+                src="./assests/rocket.svg"
+                alt="rocket"
+              />
+              <span>Custom pricing and elevated concurrency</span>
+            </p>
+            <p>
+              <img
+                style="background-color: black"
+                src="./assests/shield.svg"
+                alt="rocket"
+              />
+              <span
+                >Enterprise-grade security including SOC II, GDPR and HIPAA
+                compliance</span
+              >
+            </p>
+            <p>
+              <img
+                style="background-color: black"
+                src="./assests/enterprise.svg"
+                alt="rocket"
+              /><span>Enterprise support and SLAs</span>
+            </p>
           </div>
 
-          <div class="card__trusted--star">
-            <div class="card__trusted--stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+          <div class="card__trusted">
+            <p>Trusted by 10,000+ leading businesses</p>
+
+            <div class="card__trusted--enterprises">
+              <img
+                src="./assests/cisco.svg"
+                alt="cisco"
+                class="card__trusted--enterprises-imgs"
+                height="50px"
+                width="50px"
+              />
+              <img
+                src="./assests/t-mobile.svg"
+                alt="T mobile"
+                class="card__trusted--enterprises-imgs"
+                height="50px"
+                width="50px"
+              />
+              <img
+                src="./assests/walt-disney.svg"
+                alt="walt disney"
+                class="card__trusted--enterprises-imgs"
+                height="50px"
+                width="50px"
+              />
+              <img
+                src="./assests/nvidia.svg"
+                alt="nvidia"
+                class="card__trusted--enterprises-imgs"
+                height="50px"
+                width="50px"
+              />
+              <img
+                src="./assests/salesforce.svg"
+                alt="salesforce"
+                class="card__trusted--enterprises-imgs"
+                height="50px"
+                width="50px"
+              />
             </div>
-            <p>4.5 stars and 1,059+ reviews</p>
+
+            <div class="card__trusted--star">
+              <div class="card__trusted--stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>4.5 stars and 1,059+ reviews</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="form">
-      <div class="form__title">
-        <h2>Contact sales from</h2>
-        <p>Please fill out the form below to get started</p>
-      </div>
+      <div class="form">
+        <div class="form__title">
+          <h2>Contact sales from</h2>
+          <p>Please fill out the form below to get started</p>
+        </div>
 
-      <div class="form__entry">
-        <form action="#">
-          <label for="company">Company Website</label><br />
-          <input
-            type="text"
-            placeholder="elevenlabs.io"
-            name="company_website"
-            id="company"
-            required
-          />
-          <br />
+        <div class="form__entry">
+          <form action="#">
+            <label for="company">Company Website</label><br />
+            <input
+              type="text"
+              placeholder="elevenlabs.io"
+              name="company_website"
+              id="company"
+              required
+            />
+            <br />
 
-          <label for="email">Business Email</label> <br />
-          <input
-            type="email"
-            placeholder="example@elevenlabs.io"
-            name="business_email"
-            id="email"
-            required
-          />
-        </form>
-      </div>
+            <label for="email">Business Email</label> <br />
+            <input
+              type="email"
+              placeholder="example@elevenlabs.io"
+              name="business_email"
+              id="email"
+              required
+            />
+          </form>
+        </div>
 
-      <div class="form__submit">
-        <button class="form__submit--btn">Next</button>
+        <div class="form__submit">
+          <button class="form__submit--btn">Next</button>
 
-        <div class="lines">
-          <div class="lines__line"></div>
-          <div class="lines__line"></div>
-          <div class="lines__line"></div>
+          <div class="lines">
+            <div class="lines__line"></div>
+            <div class="lines__line"></div>
+            <div class="lines__line"></div>
+          </div>
         </div>
       </div>
     </div>
