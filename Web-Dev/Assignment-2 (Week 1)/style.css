@@ -29,7 +29,7 @@ body {
 
 .card,
 .form {
-  padding: 6rem
+  padding: 6rem;
 }
 
 .card {
@@ -89,21 +89,15 @@ body {
 
 .card__trusted--enterprises {
   display: flex;
-  justify-content: space-around;
-  /* max-width: 110rem; */
-  color: #1c1c1c;
-  /* gap: 10rem; */
-  padding-bottom: 2rem;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 4rem 3rem 4rem;
 }
 
 .card__trusted--enterprises img {
-  height: 10rem;
-  width: 10rem;
-}
-
-.img-edit {
-  height: auto;
-  width: 10rem;
+  height: 4.2rem;
+  width: auto;
 }
 
 .card__trusted--star {
@@ -118,6 +112,10 @@ body {
   font-size: 1.6rem;
   line-height: 0.8;
   /* align-self: center; */
+}
+
+.img--edit {
+  color: #fff;
 }
 
 
