@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int printFunc(int n){
+void printFunc(int n){
   for(int i = 1; i <= n; i++){
     cout << "I am learning functions" << endl;
   }
