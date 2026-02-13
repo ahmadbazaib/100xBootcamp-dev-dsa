@@ -1,5 +1,8 @@
 "use strict";
 
+////////////////////////////////////////////////////////////////////////////
+// 19 basic (Objects + Arrays)
+
 ////////////////////////////////////////////
 // 1. Sum values in object arrays
 
@@ -308,15 +311,77 @@
 ////////////////////////////////////////////
 // 19. Check if all values in object are numbers
 
-const data = { a: 1, b: "hello", c: 3 };
+// const data = { a: 1, b: "hello", c: 3 };
 
-let flag = true;
+// let flag = true;
 
-for (const value of Object.values(data)) {
-  if (typeof value !== "number") {
-    flag = false;
-    break;
-  }
-}
+// for (const value of Object.values(data)) {
+//   if (typeof value !== "number") {
+//     flag = false;
+//     break;
+//   }
+// }
 
-console.log(flag);
+// console.log(flag);
+
+////////////////////////////////////////////////////////////////////////////
+// 20 intermediate (Objects + Arrays)
+
+////////////////////////////////////////////
+// 1. Sum all transactions per user
+
+// const data = [
+//   { user: "A", amount: 100 },
+//   { user: "B", amount: 200 },
+//   { user: "A", amount: 50 },
+// ];
+
+// const result = {};
+
+// for (const value of data) {
+//   if (result[value.user]) {
+//     result[value.user] += value.amount;
+//   } else {
+//     result[value.user] = value.amount;
+//   }
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 2. Transform API response to object (id → name)
+
+// const data = [
+//   { id: 1, name: "Alice" },
+//   { id: 2, name: "Bob" },
+// ];
+
+// const result = {};
+
+// for (const value of data) {
+//   result[value.id] = value.name;
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 3. Remove falsy values from object
+
+// const data = { a: 0, b: null, c: "hello", d: undefined, e: 5 };
+
+// const result = {};
+
+// for (const [key, value] of Object.entries(data)) {
+//   if (value) {
+//     result[key] = value;
+//   }
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 4. Check for permissions from roles
+
+const roles = { admin: ["read", "write"], user: ["read"], staff: ["write"] };
+const checkRole = "user";
+const action = "write";
