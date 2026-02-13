@@ -149,15 +149,174 @@
 ////////////////////////////////////////////
 // 10. Pick only given keys from object
 
-const obj = { name: "Rahul", age: 23, city: "Noida" };
-const keys = ["name", "city"];
+// const obj = { name: "Rahul", age: 23, city: "Noida" };
+// const keys = ["name", "city"];
 
-const result = {};
+// const result = {};
 
-for (const key of keys) {
-  if (key in obj) {
-    result[key] = obj[key];
+// for (const key of keys) {
+//   if (key in obj) {
+//     result[key] = obj[key];
+//   }
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 11. Find student with highest average marks
+
+// const data = { A: [80, 90], B: [70, 75, 85] };
+
+// const result = {};
+
+// for (const [key, value] of Object.entries(data)) {
+//   result[key] = value.reduce((acc, el) => acc + el, 0) / value.length;
+// }
+
+// let maxValue = -Infinity;
+// let maxKey = null;
+
+// // console.log(result);
+
+// for (const [key, value] of Object.entries(result)) {
+//   if (value >= maxValue) {
+//     maxValue = value;
+//     maxKey = key;
+//   }
+// }
+
+// console.log(maxKey);
+
+////////////////////////////////////////////
+// 12. Sort object entries by values (ascending)
+
+// const data = { a: 3, b: 1, c: 2 };
+
+// const result = [];
+
+// for (const [key, value] of Object.entries(data)) {
+//   result.push([key, value]);
+// }
+
+// result.sort(function (a, b) {
+//   // console.log("Comparing", a, "and", b);
+//   return a[1] - b[1];
+// });
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 13. Count number of keys in object
+
+// const data = { a: 1, b: 2, c: 3 };
+
+// let count = 0;
+
+// for (const key of Object.keys(data)) {
+//   if (key) {
+//     count++;
+//   }
+// }
+
+// console.log(count);
+
+////////////////////////////////////////////
+// 14. Capitalize string values inside object
+
+// const data = { name: "alice", city: "delhi" };
+
+// const result = {};
+
+// for (const [key, value] of Object.entries(data)) {
+//   result[key] = value.toUpperCase();
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 15. Convert object to query string
+
+// const data = { name: "Alice", age: 25 };
+
+// let result = [];
+
+// for (const [key, value] of Object.entries(data)) {
+//   result[key] = `${key}=${value}`;
+// }
+
+// // const queryString = Object.entries(data)
+// //   .map(([key, value]) => `${key}=${value}`)
+// //   .join("&");
+
+// // console.log(queryString);
+
+// const dataStr = Object.values(result);
+
+// const [valueOne, valueTwo] = dataStr;
+
+// console.log(`${valueOne}&${valueTwo}`);
+
+////////////////////////////////////////////
+// 16. Count even and odd numbers in array
+
+// const data = [1, 2, 3, 4, 5, 6];
+
+// const result = { even: 0, odd: 0 };
+
+// for (const el of data) {
+//   if (el % 2 === 0) {
+//     result.even++;
+//   } else {
+//     result.odd++;
+//   }
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 17. Find common keys between two objects
+
+// const dataOne = { a: 1, b: 2, c: 3 };
+// const dataTwo = { b: 4, c: 5, d: 6 };
+
+// const result = [];
+
+// for (const key of Object.keys(dataOne)) {
+//   if (key in dataTwo) {
+//     result.push(key);
+//   }
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 18. Convert array of objects to lookup by id
+
+// const data = [
+//   { id: 1, name: "A" },
+//   { id: 2, name: "B" },
+// ];
+
+// const result = {};
+
+// for (const item of data) {
+//   result[item.id] = item;
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 19. Check if all values in object are numbers
+
+const data = { a: 1, b: "hello", c: 3 };
+
+let flag = true;
+
+for (const value of Object.values(data)) {
+  if (typeof value !== "number") {
+    flag = false;
+    break;
   }
 }
 
-console.log(result);
+console.log(flag);
