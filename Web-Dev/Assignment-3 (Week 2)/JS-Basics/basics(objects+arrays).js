@@ -382,6 +382,168 @@
 ////////////////////////////////////////////
 // 4. Check for permissions from roles
 
-const roles = { admin: ["read", "write"], user: ["read"], staff: ["write"] };
-const checkRole = "user";
-const action = "write";
+// const roles = { admin: ["read", "write"], user: ["read"], staff: ["write"] };
+// const checkRole = "user";
+// const action = "write";
+
+// let flag = false;
+// // console.log(roles.user);
+
+// if (roles[checkRole]) {
+//   for (const value of roles[checkRole]) {
+//     if (value === action) {
+//       flag = true;
+//       break;
+//     }
+//   }
+// }
+
+// console.log(flag);
+
+////////////////////////////////////////////
+// 5. Transform array of orders into revenue per category
+
+// const data = [
+//   { id: 1, category: "electronics", price: 100 },
+//   { id: 2, category: "clothes", price: 50 },
+//   { id: 3, category: "electronics", price: 200 },
+// ];
+
+// const result = {};
+
+// for (const value of data) {
+//   if (result[value.category]) {
+//     result[value.category] += value.price;
+//   } else {
+//     result[value.category] = value.price;
+//   }
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 6. Remove duplicate objects by id
+
+// const data = [
+//   { id: 1, name: "A" },
+//   { id: 2, name: "B" },
+//   { id: 1, name: "A" },
+// ];
+
+// const result = [];
+
+// for (const value of data) {
+//   // console.log(value);
+//   if (!result[value.id]) {
+//     result.push(value);
+//   } else {
+//     continue;
+//   }
+// }
+// console.log(result);
+
+////////////////////////////////////////////
+// 7. Chunk object entries into groups of size
+
+// const data = { a: 1, b: 2, c: 3, d: 4 };
+// const size = 2;
+
+// const entries = Object.entries(data);
+
+// let currentChunk = [];
+// const result = [];
+
+// for (const el of entries) {
+//   currentChunk.push(el);
+
+//   if (currentChunk.length === size) {
+//     result.push(currentChunk);
+//     currentChunk = [];
+//   }
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// Extra: Find longest string among object values
+
+// const data = { a: "apple", b: "banana", c: "kiwi" };
+
+// const result = [];
+
+// for (const value of Object.values(data)) {
+//   result.push(value);
+// }
+
+// let maxLength = -Infinity;
+// let maxEl = null;
+
+// for (const el of result) {
+//   if (el.length >= maxLength) {
+//     maxLength = el.length;
+//     maxEl = el;
+//   }
+// }
+
+// console.log(maxEl);
+
+////////////////////////////////////////////
+// 8. Convert the object where languages are the top-level
+// keys, and inside each are translation strings by key into
+// an object where translation keys are the top-level keys, and
+// inside each you store values per language [HARD**]
+
+// const input = {
+//   en: { hello: "Hello", bye: "Goodbye" },
+//   fr: { hello: "Bonjour", bye: "Au revoir" },
+//   es: { hello: "Hola" },
+// };
+
+// const result = {};
+
+// for (const [lang, translations] of Object.entries(input)) {
+//   for (const [key, value] of Object.entries(translations)) {
+//     if (!result[key]) {
+//       result[key] = {};
+//     }
+//     result[key][lang] = value;
+//   }
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 9. Build index of ids grouped by category
+
+// const data = [
+//   { id: 1, category: "fruit" },
+//   { id: 2, category: "veggie" },
+//   { id: 3, category: "fruit" },
+// ];
+
+// const result = {};
+
+// for (const value of data) {
+//   if (result[value.category]) {
+//     result[value.category].push(value.id);
+//   } else {
+//     result[value.category] = [value.id];
+//   }
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 10. Remove deeply nested key from object
+
+// const data = { a: { b: { c: 1, d: 2 } } };
+
+// delete data.a.b.c;
+
+// console.log(data);
+
+////////////////////////////////////////////
+// 11. Check if two objects are deeply equal
+
+const dataOne = { a: { x: 1, y: 2 } };
+const dataTwo = { a: { x: 1, y: 2 } };
