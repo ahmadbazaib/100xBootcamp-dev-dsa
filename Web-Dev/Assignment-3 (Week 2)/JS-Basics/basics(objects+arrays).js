@@ -231,7 +231,7 @@
 // const result = {};
 
 // for (const [key, value] of Object.entries(data)) {
-//   result[key] = value.toUpperCase();
+//   result[key] = value[0].toUpperCase()+value.slice(1);
 // }
 
 // console.log(result);
