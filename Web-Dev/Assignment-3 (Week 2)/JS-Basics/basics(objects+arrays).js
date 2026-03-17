@@ -348,6 +348,31 @@
 
 // console.log(result);
 
+//MY SOLUTION:
+// const data = [
+//   { user: "A", amount: 100 },
+//   { user: "B", amount: 200 },
+//   { user: "A", amount: 50 }
+// ];
+
+// const result = {};
+
+// for(const el of data){
+//     if(result[el.user]){
+//         result[el.user].push(el.amount);
+//     }else{
+//         result[el.user] = [el.amount];
+//     }
+// }
+
+// const finalResult = {};
+
+// for(const [key, value] of Object.entries(result)){
+//     finalResult[key] = value.reduce((acc, n) => acc +n, 0);
+// }
+
+// console.log(finalResult);
+
 ////////////////////////////////////////////
 // 2. Transform API response to object (id → name)
 
