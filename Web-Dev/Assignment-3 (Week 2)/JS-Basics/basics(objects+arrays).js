@@ -570,5 +570,31 @@
 ////////////////////////////////////////////
 // 11. Check if two objects are deeply equal
 
+// My Solution
 const dataOne = { a: { x: 1, y: 2 } };
-const dataTwo = { a: { x: 1, y: 2 } };
+const dataTwo = { a: { x: 1, y: 3 } };
+
+let flag = false;
+
+for (const [key, value] of Object.entries(dataOne)) {
+  for (const [el, prop] of Object.entries(dataTwo)) {
+    if (key === el) {
+      if (value.x === prop.x && value.y === prop.y) {
+        flag = true;
+      }
+    }
+  }
+}
+
+console.log(flag);
+
+// Claude Solution, uses recursion, Handles arbitrary nesting not upto 2 levels like my code.
+function deepEqual(a, b) {
+  console.log(JSON.stringify(a));
+  return JSON.stringify(a) === JSON.stringify(b);
+}
+
+console.log(deepEqual(dataOne, dataTwo)); // true
+
+////////////////////////////////////////////
+// 11. Check if two objects are deeply equal
