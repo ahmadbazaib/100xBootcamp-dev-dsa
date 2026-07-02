@@ -570,31 +570,70 @@
 ////////////////////////////////////////////
 // 11. Check if two objects are deeply equal
 
-// My Solution
-const dataOne = { a: { x: 1, y: 2 } };
-const dataTwo = { a: { x: 1, y: 3 } };
+///// My Solution
+// const dataOne = { a: { x: 1, y: 2 } };
+// const dataTwo = { a: { x: 1, y: 3 } };
 
-let flag = false;
+// let flag = false;
 
-for (const [key, value] of Object.entries(dataOne)) {
-  for (const [el, prop] of Object.entries(dataTwo)) {
-    if (key === el) {
-      if (value.x === prop.x && value.y === prop.y) {
-        flag = true;
-      }
-    }
-  }
-}
+// for (const [key, value] of Object.entries(dataOne)) {
+//   for (const [el, prop] of Object.entries(dataTwo)) {
+//     if (key === el) {
+//       if (value.x === prop.x && value.y === prop.y) {
+//         flag = true;
+//       }
+//     }
+//   }
+// }
 
-console.log(flag);
+// console.log(flag);
 
-// Claude Solution, uses recursion, Handles arbitrary nesting not upto 2 levels like my code.
-function deepEqual(a, b) {
-  console.log(JSON.stringify(a));
-  return JSON.stringify(a) === JSON.stringify(b);
-}
+///// Claude Solution, uses recursion, Handles arbitrary nesting not upto 2 levels like my code.
+// function deepEqual(a, b) {
+//   console.log(JSON.stringify(a));
+//   return JSON.stringify(a) === JSON.stringify(b);
+// }
 
-console.log(deepEqual(dataOne, dataTwo)); // true
+// console.log(deepEqual(dataOne, dataTwo)); // true
 
 ////////////////////////////////////////////
-// 11. Check if two objects are deeply equal
+// 12. Deep flatten nested arrays inside object
+
+// const data = { a: [1, [2, [3]]], b: [4, [5]] };
+
+// const result = {};
+
+// for (const [key, value] of Object.entries(data)) {
+//   result[key] = value.flat(Infinity);
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 13. Find most repeated word across categories
+
+// const data = { fruits: ["apple", "apple", "banana"], drinks: ["apple", "tea"] };
+
+// const result = {};
+
+// for (const value of Object.values(data)) {
+//   for (const el of value) {
+//     if (result[el]) {
+//       result[el]++;
+//     } else {
+//       result[el] = 1;
+//     }
+//   }
+// }
+
+// let maxNum = -Infinity;
+// let maxEl = null;
+
+// for (const [key, value] of Object.entries(result)) {
+//   if (value >= maxNum) {
+//     maxNum = value;
+//     maxEl = key;
+//   }
+// }
+
+// console.log(maxEl);
