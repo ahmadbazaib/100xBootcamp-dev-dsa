@@ -637,3 +637,31 @@
 // }
 
 // console.log(maxEl);
+
+////////////////////////////////////////////
+// 14. Find intersection of all arrays in object
+
+const data = {
+  a: [1, 2, 3],
+  b: [2, 3, 4],
+  c: [3, 4, 5],
+};
+
+const array = Object.values(data);
+
+const result = [];
+
+for (const num of array[0]) {
+  let found = true;
+
+  for (let i = 1; i < array.length; i++) {
+    if (!array[i].includes(num)) {
+      found = false;
+      break;
+    }
+  }
+
+  if (found) result.push(num);
+}
+
+console.log(result);
