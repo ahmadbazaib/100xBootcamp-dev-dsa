@@ -693,7 +693,7 @@
 ////////////////////////////////////////////
 // 16. Nested object destructuring
 
-const data = { user: { profile: { name: "Alice", age: 25 } } };
+// const data = { user: { profile: { name: "Alice", age: 25 } } };
 
 //// MY SOLUTION BUT I SHOULD USE DESTRUCTURING
 // let nameData = null;
@@ -708,10 +708,98 @@ const data = { user: { profile: { name: "Alice", age: 25 } } };
 
 // console.log(nameData, ageData);
 
-const {
-  user: {
-    profile: { name, age },
-  },
-} = data;
+// const {
+//   user: {
+//     profile: { name, age },
+//   },
+// } = data;
 
-console.log(name, age);
+// console.log(name, age);
+
+////////////////////////////////////////////
+// 17. Find top N keys by value
+
+// const data = { a: 10, b: 50, c: 30, d: 40 };
+// const N = 2;
+
+// const result = [];
+
+// const el = [];
+
+// for (const [key, value] of Object.entries(data)) {
+//   result.push([key, value]);
+// }
+
+// result.sort(function (a, b) {
+//   return b[1] - a[1];
+// });
+
+// for (let i = 0; i < N; i++) {
+//   el.push(result[i][0]);
+// }
+
+// console.log(el);
+
+////////////////////////////////////////////
+// 18. Sort array of objects by name then age
+
+// const data = [
+//   { name: "Alice", age: 30 },
+//   { name: "Bob", age: 25 },
+//   { name: "Alice", age: 22 },
+// ];
+
+// data.sort((a, b) => {
+//   if (a.name === b.name) {
+//     return a.age - b.age;
+//   }
+
+//   return a.name.localeCompare(b.name);
+// });
+
+// console.log(data);
+
+////////////////////////////////////////////
+// 19. Reconcile two lists (missing + extra items)
+
+// const expected = ["a", "b", "c"];
+// const actual = ["b", "c", "d"];
+
+// const result = {
+//   missing: [],
+//   extra: [],
+// };
+
+// // Find missing items
+// for (const item of expected) {
+//   if (!actual.includes(item)) {
+//     result.missing.push(item);
+//   }
+// }
+
+// // Find extra items
+// for (const item of actual) {
+//   if (!expected.includes(item)) {
+//     result.extra.push(item);
+//   }
+// }
+
+// console.log(result);
+
+////////////////////////////////////////////
+// 20. Merge two objects (no sum, override second)
+
+// const obj1 = { a: 10, b: 20 };
+// const obj2 = { a: 5, c: 15 };
+
+// const result = {};
+
+// for (const [key, value] of Object.entries(obj1)) {
+//   result[key] = value;
+// }
+
+// for (const [key, value] of Object.entries(obj2)) {
+//   result[key] = value;
+// }
+
+// console.log(result);
