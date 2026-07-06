@@ -689,3 +689,29 @@
 // }
 
 // console.log(result);
+
+////////////////////////////////////////////
+// 16. Nested object destructuring
+
+const data = { user: { profile: { name: "Alice", age: 25 } } };
+
+//// MY SOLUTION BUT I SHOULD USE DESTRUCTURING
+// let nameData = null;
+// let ageData = 0;
+
+// for (const [key, value] of Object.entries(data)) {
+//   for (const prop of Object.values(value)) {
+//     nameData = prop.name;
+//     ageData = prop.age;
+//   }
+// }
+
+// console.log(nameData, ageData);
+
+const {
+  user: {
+    profile: { name, age },
+  },
+} = data;
+
+console.log(name, age);
