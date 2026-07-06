@@ -641,27 +641,51 @@
 ////////////////////////////////////////////
 // 14. Find intersection of all arrays in object
 
-const data = {
-  a: [1, 2, 3],
-  b: [2, 3, 4],
-  c: [3, 4, 5],
-};
+// const data = {
+//   a: [1, 2, 3],
+//   b: [2, 3, 4],
+//   c: [3, 4, 5],
+// };
 
-const array = Object.values(data);
+// const array = Object.values(data);
 
-const result = [];
+// const result = [];
 
-for (const num of array[0]) {
-  let found = true;
+// for (const num of array[0]) {
+//   let found = true;
 
-  for (let i = 1; i < array.length; i++) {
-    if (!array[i].includes(num)) {
-      found = false;
-      break;
-    }
-  }
+//   for (let i = 1; i < array.length; i++) {
+//     if (!array[i].includes(num)) {
+//       found = false;
+//       break;
+//     }
+//   }
 
-  if (found) result.push(num);
-}
+//   if (found) result.push(num);
+// }
 
-console.log(result);
+// console.log(result);
+
+////////////////////////////////////////////
+// 15. Deep merge two nested objects
+
+// const dataOne = { a: { x: 1, y: 2 } };
+// const dataTwo = { a: { y: 3, z: 4 } };
+
+// const result = {};
+
+// for (const [key, value] of Object.entries(dataOne)) {
+//   result[key] = { ...value };
+// }
+
+// for (const [key, value] of Object.entries(dataTwo)) {
+//   if (!result[key]) {
+//     result[key] = {};
+//   }
+
+//   for (const [innerKey, innerValue] of Object.entries(value)) {
+//     result[key][innerKey] = innerValue;
+//   }
+// }
+
+// console.log(result);
