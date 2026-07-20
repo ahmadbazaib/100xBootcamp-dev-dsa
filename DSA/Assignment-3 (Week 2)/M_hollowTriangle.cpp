@@ -28,3 +28,31 @@ int main()
   
   return 0;
 }
+
+// My Solution
+
+// int main()
+// {
+//     long long n;
+//     cin>>n;
+    
+//     for(int i = 1; i <= n; i++){
+//         // Spaces
+//         for(int j = 1; j <= (n-i); j++){
+//             cout << " ";
+//         }
+        
+//         for(int k = 1; k <= i; k++){
+//             if(k == 1 || k == i || i == n){
+//                 cout << "*";
+//                 if(k < i) cout << " ";
+//             }else{
+//                 cout << "  ";
+//             }
+//         }
+        
+//         cout << endl;
+//     }
+        
+//     return 0;
+// }
