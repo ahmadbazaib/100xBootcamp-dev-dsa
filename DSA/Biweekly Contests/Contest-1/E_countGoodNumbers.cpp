@@ -19,3 +19,27 @@ int main(){
 
   return 0;
 }
+
+// My Solution
+// int main()
+// {
+//     int n, goodInt = 0;
+//     cin >> n;
+    
+//     int A[n];
+//     for(int i = 0; i < n; i++){
+//         cin >> A[i];
+//     }
+    
+//     for(int i = 0; i < n; i++){
+//         if(A[i] != 0 and 18%A[i]==0){
+//             goodInt++;
+//         }else if(A[i]%45==0){
+//             goodInt++;
+//         }
+//     }
+    
+//     cout << goodInt;
+    
+//     return 0;
+// }
