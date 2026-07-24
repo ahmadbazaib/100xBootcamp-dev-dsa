@@ -33,3 +33,4 @@ const countCharacters = (statement) => {
 };
 module.exports = countCharacters;
 
+// console.log(countCharacters("hello"));
