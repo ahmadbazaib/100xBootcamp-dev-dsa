@@ -20,6 +20,22 @@
 
 function reverseString(str) {
   // Your code here
+  const firstStr = [];
+  for (let i = 0; i < str.length; i++) {
+    firstStr.push(str[i]);
+  }
+
+  let revStr = [];
+
+  for (let i = firstStr.length - 1; i >= 0; i--) {
+    revStr.push(firstStr[i]);
+  }
+
+  revStr = revStr.join("");
+
+  return revStr;
 }
 
 module.exports = reverseString;
+
+console.log(reverseString("Sumana"));
