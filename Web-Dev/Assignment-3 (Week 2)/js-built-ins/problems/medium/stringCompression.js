@@ -1,5 +1,6 @@
 /*
-  Write a function `compression` which takes a string as input and returns a compressed version of the string. The compression is done by replacing consecutive repeating characters with the character followed by the count of repetitions. If a character does not repeat, it is not followed by a count.
+  Write a function `compression` which takes a string as input and returns a compressed version of the string. The compression is done by replacing consecutive repeating 
+  characters with the character followed by the count of repetitions. If a character does not repeat, it is not followed by a count.
 
   Example:
   - Input: "aaabbbbcccvvmm"
@@ -22,6 +23,36 @@
 */
 function compression(str) {
   // Your code here
+  if (str === "") {
+    return "";
+  }
+
+  let result = "";
+  let cnt = 1;
+
+  for (let i = 1; i < str.length; i++) {
+    if (str[i] === str[i - 1]) {
+      cnt++;
+    } else {
+      result += str[i - 1];
+
+      if (cnt > 1) {
+        result += cnt;
+      }
+
+      cnt = 1;
+    }
+  }
+
+  result += str[str.length - 1];
+
+  if (cnt > 1) {
+    result += cnt;
+  }
+
+  return result;
 }
 
 module.exports = compression;
+
+console.log(compression("aaabbbbcccvvmm"));

@@ -27,6 +27,25 @@
 
 function isPerfectNumber(num) {
   // Your code here
+  let flag = true;
+  const divNum = [];
+
+  for (let i = 1; i < num; i++) {
+    if (num % i === 0) {
+      divNum.push(i);
+    }
+  }
+
+  const redDivNum = divNum.reduce((acc, cur) => (acc += cur), 0);
+
+  if (redDivNum !== num) flag = false;
+
+  return flag;
 }
 
 module.exports = { isPerfectNumber };
+
+console.log(isPerfectNumber(6));
+console.log(isPerfectNumber(28));
+console.log(isPerfectNumber(10));
+console.log(isPerfectNumber(1));

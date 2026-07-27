@@ -22,5 +22,17 @@
 */
 function nonrepeat(str) {
   // Your code here
+  const upper = str.split("");
+  const nonRepeat = upper.filter(
+    (ele) => upper.indexOf(ele) === upper.lastIndexOf(ele),
+  );
+
+  if (nonRepeat.length === 0) {
+    return null;
+  } else {
+    return nonRepeat[0];
+  }
 }
 module.exports = nonrepeat;
+
+console.log(nonrepeat("a!b@c#d$a"));
