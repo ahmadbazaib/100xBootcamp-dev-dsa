@@ -28,3 +28,31 @@ int main()
 
   return 0;
 }
+
+// My Solution
+
+// ll cntZero(ll n){
+//    int cnt = 0;
+        
+//    do{
+//        if(n%10 == 0){
+//            cnt++;
+//        }
+       
+//        n /= 10;
+//    }while(n);
+   
+//    return cnt;
+// }
+
+// int main()
+// {
+//     ll n;
+//     cin >> n;
+    
+//     int cnt = cntZero(n);
+    
+//     cout << cnt;
+    
+//     return 0;
+// }
