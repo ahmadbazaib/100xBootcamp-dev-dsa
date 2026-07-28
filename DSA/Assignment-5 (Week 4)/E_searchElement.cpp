@@ -23,3 +23,31 @@ int main()
 
   return 0;
 }
+
+// My Solution
+
+// int main(){
+//     int n, x, key; 
+//     cin >> n >> x;
+    
+//     int A[n];
+    
+//     for(int i = 0; i < n; i++){
+//         cin >> A[i];
+//     }
+    
+//     for(int i = 0; i < n; i++){
+//         if(x == A[i]){
+//             key =  A[i];
+//         }
+//     }
+    
+//     if(key == x){
+//         cout << "YES";
+//     }else
+//     {
+//         cout << "NO";
+//     }
+    
+//     return 0;
+// }

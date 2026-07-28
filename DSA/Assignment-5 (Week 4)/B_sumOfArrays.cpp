@@ -21,3 +21,22 @@ int main()
 
   return 0;
 }
+
+// My Solution
+// int main(){
+//     long long n, sum = 0; 
+//     cin >> n;
+    
+//     int A[n];
+    
+//     for(int i = 0; i < n; i++){
+//         cin >> A[i];
+//     }
+    
+//     for(int i = 0; i < n; i++){
+//         sum += A[i];
+//     }
+//     cout << sum;
+    
+//     return 0;
+// }
