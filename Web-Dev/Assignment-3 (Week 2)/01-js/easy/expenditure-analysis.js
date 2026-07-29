@@ -25,7 +25,7 @@ function calculateTotalSpentByCategory(transactions) {
   for (const [key, value] of Object.entries(result)) {
     output.push({
       category: key,
-      price: value,
+      totalSpent: value,
     });
   }
 
