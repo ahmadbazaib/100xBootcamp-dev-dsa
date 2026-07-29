@@ -32,3 +32,32 @@ int main()
 
   return 0;
 }
+
+// My solution
+
+// int main(){
+//     int n; 
+//     cin >> n;
+    
+//     int A[n];
+    
+//     for(int i = 0; i < n; i++){
+//         cin >> A[i];
+//     }
+    
+//     bool flag = true;
+    
+//     for(int i = 0; i < n - 1; i++){
+//         if(A[i] > A[i + 1]){
+//             flag = false;
+//         }
+//     }
+    
+//     if(flag){
+//         cout << "YES";
+//     }else{
+//         cout << "NO";
+//     }
+    
+//     return 0;
+// }
