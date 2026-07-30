@@ -7,7 +7,26 @@
 */
 
 function isPalindrome(str) {
-    return true;
+  const strArrayOne = str.toLowerCase().split("");
+  const strArrayTwo = [];
+  let flag = false;
+
+  for (let i = strArrayOne.length - 1; i >= 0; i--) {
+    strArrayTwo.push(strArrayOne[i]);
+  }
+
+  const finalStrArrayOne = strArrayOne.join("").replace(/[^a-z0-9]/g, "");
+  const finalStrArrayTwo = strArrayTwo.join("").replace(/[^a-z0-9]/g, "");
+
+  console.log(finalStrArrayOne, finalStrArrayTwo);
+
+  if (finalStrArrayOne === finalStrArrayTwo) {
+    flag = true;
+  }
+
+  return flag;
 }
 
 module.exports = isPalindrome;
+
+isPalindrome("Able, was I ere I saw Elba!");
