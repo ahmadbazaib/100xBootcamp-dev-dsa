@@ -22,3 +22,23 @@ int main()
   
   return 0;
 }
+
+// My solution
+// But we need to reverse the array in its place, so the above one is correct
+
+// int main(){
+//     long long n;
+//     cin >> n;
+    
+//     long long A[n];
+    
+//     for(int i = 0; i < n; i++){
+//         cin >> A[i];
+//     }
+    
+//     for(int i = n - 1; i >= 0; i--){
+//         cout << A[i] << " ";
+//     }
+    
+//     return 0;
+// }
