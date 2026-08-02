@@ -21,6 +21,29 @@ class Calculator {
   constructor() {
     this.result = 0;
   }
+
+  add(num) {
+    this.result += num;
+  }
+
+  sub(num) {
+    this.result -= num;
+  }
+  mul(num) {
+    this.result *= num;
+  }
+  div(num) {
+    this.result /= num;
+  }
+  sub(num) {
+    this.result += num;
+  }
+
+  clear() {
+    this.result = 0;
+  }
 }
+
+const calc = new Calculator();
 
 module.exports = Calculator;
