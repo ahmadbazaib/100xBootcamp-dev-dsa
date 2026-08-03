@@ -5,9 +5,16 @@
 
 let counter = 0;
 
-const updateCounter = () => {
-  counter++;
-  console.log(counter);
-};
+// const updateCounter = () => {
+//   counter++;
+//   console.log(counter);
+// };
 
-setInterval(updateCounter, 1000);
+// setInterval(updateCounter, 1000);
+
+//setInterval(callback, delay);
+
+setInterval(() => {
+  counter++;
+  return console.log(counter);
+}, 1000);
