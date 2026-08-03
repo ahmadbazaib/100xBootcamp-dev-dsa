@@ -17,6 +17,8 @@
   - `npm run test-calculator`
 */
 
+// inside add(), this refers to the object that calc points to.
+
 class Calculator {
   constructor() {
     this.result = 0;
@@ -26,21 +28,44 @@ class Calculator {
     this.result += num;
   }
 
-  sub(num) {
+  subtract(num) {
     this.result -= num;
   }
-  mul(num) {
+  multiply(num) {
     this.result *= num;
   }
-  div(num) {
-    this.result /= num;
-  }
-  sub(num) {
-    this.result += num;
+  divide(num) {
+    if (num === 0) {
+      throw new Error("Error");
+    } else {
+      this.result /= num;
+    }
   }
 
   clear() {
     this.result = 0;
+  }
+
+  getResult() {
+    return this.result;
+  }
+
+  calculate(expression) {
+    try {
+      if (!/^[0-9+\-*/().\s]+$/.test(expression)) {
+        throw new Error("Error");
+      }
+
+      const answer = eval(expression);
+
+      if (!Number.isFinite(answer)) {
+        throw new Error("Error");
+      }
+
+      this.result = answer;
+    } catch {
+      throw new Error("Error");
+    }
   }
 }
 
