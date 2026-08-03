@@ -56,6 +56,7 @@ class Calculator {
         throw new Error("Error");
       }
 
+      //eval computes and regex validates the expression
       const answer = eval(expression);
 
       if (!Number.isFinite(answer)) {
@@ -69,6 +70,6 @@ class Calculator {
   }
 }
 
-const calc = new Calculator();
+// const calc = new Calculator();
 
 module.exports = Calculator;
