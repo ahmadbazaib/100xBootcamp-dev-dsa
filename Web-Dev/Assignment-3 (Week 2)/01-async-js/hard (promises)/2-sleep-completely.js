@@ -4,7 +4,20 @@
  * the function should return a promise just like before
  */
 
+// function sleep(milliseconds) {
+//   return new Promise((resolve) => setTimeout(resolve, milliseconds));
+// }
+
 function sleep(milliseconds) {
+  const now = Date.now();
+
+  while (Date.now() - now < milliseconds) {
+    // Keeping the js thread busy;
+  }
+
+  return Promise.resolve();
 }
+
+sleep(1000);
 
 module.exports = sleep;
