@@ -9,15 +9,11 @@
 
 function callbackify(fn) {
   return function (...args) {
-    const callback = args.pop(); // getting the last argument which is a callback function
+    const callback = args.pop();
 
     fn(...args)
-      .then((data) => {
-        callback(null, data);
-      })
-      .catch((err) => {
-        callback(err);
-      });
+      .then((data) => callback(null, data))
+      .catch((err) => callback(err));
   };
 }
 
