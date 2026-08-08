@@ -12,16 +12,15 @@ int main(){
     }
   }
 
-  int min = INT_MAX;
-  for(int i = 0; i < n; i++){
-    for(int j = 0; j < m; j++){
-      if(A[i][j] < min){
-        min = A[i][j];
-      }
+  int sum = 0;
+  for(int i = 0; i < m; i++){
+    for(int j = 0; j < n; j++){
+      sum = sum + A[j][i];
     }
-    cout << min << " ";
-    min = INT_MAX;
+    cout << sum << " ";
+    sum = 0;
   }
+
 
   return 0;
 }

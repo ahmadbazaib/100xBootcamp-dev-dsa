@@ -12,15 +12,24 @@ int main(){
     }
   }
 
-  int min = INT_MAX;
+  int count = 0, maxCount = 0, ind;
   for(int i = 0; i < n; i++){
     for(int j = 0; j < m; j++){
-      if(A[i][j] < min){
-        min = A[i][j];
+      if(A[i][j] == 1){
+        count++;
       }
     }
-    cout << min << " ";
-    min = INT_MAX;
+    if(count > maxCount){
+      maxCount = count;
+      ind = i;
+    }
+    count = 0;
+  }
+
+  if(maxCount){
+    cout << ind;
+  }else{
+    cout << -1;
   }
 
   return 0;
