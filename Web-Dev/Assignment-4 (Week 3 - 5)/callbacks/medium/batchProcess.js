@@ -12,6 +12,57 @@
 // - Start new work as soon as one finishes.
 // - Stop and return an error if any task fails.
 
-function batchProcess(items, limit, worker, onComplete) {}
+function batchProcess(items, limit, worker, onComplete) {
+  let active = 0;
+  let nextIndex = 0;
+  let completed = 0;
+  const results = [];
+  let stopped = false;
+
+  function startNext() {
+    if (stopped) return;
+
+    // Everything has finished
+    if (completed === items.length) {
+      onComplete(null, results);
+      return;
+    }
+
+    // Start as many workers as the limit allows
+    while (active < limit && nextIndex < items.length) {
+      const index = nextIndex;
+      nextIndex++;
+      active++;
+
+      worker(items[index], (err, data) => {
+        active--;
+
+        if (stopped) return;
+
+        // Stop if this worker failed
+        if (err) {
+          stopped = true;
+          onComplete(err);
+          return;
+        }
+
+        // Store result at the original position
+        results[index] = data;
+        completed++;
+
+        // A worker finished, so start another one
+        startNext();
+      });
+    }
+  }
+
+  // Nothing to process
+  if (items.length === 0) {
+    onComplete(null, []);
+    return;
+  }
+
+  startNext();
+}
 
 module.exports = batchProcess;
