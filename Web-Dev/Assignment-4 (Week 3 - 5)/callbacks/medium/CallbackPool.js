@@ -7,9 +7,10 @@
 // As tasks complete, queued tasks should start automatically.
 // Each task must invoke its callback with its result when finished.
 
-
 class CallbackPool {
-  constructor(limit) {}
+  constructor(limit) {
+    this.limit = limit;
+  }
 
   run(task, onComplete) {}
 
